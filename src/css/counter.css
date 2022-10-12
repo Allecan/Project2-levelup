@@ -32,3 +32,8 @@ button:hover {
 .negative {
   color: #f12222;
 }
+
+#navhome:hover {
+  color: #f18522;
+  font-weight: 800;
+}

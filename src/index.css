@@ -24,10 +24,11 @@ h2 {
   font-size: 28.43px;
   line-height: 140%;
 }
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+
+h3 {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21.33px;
+  line-height: 140%;
+}
