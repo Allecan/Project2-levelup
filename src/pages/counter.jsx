@@ -18,7 +18,7 @@ function Counter() {
     <div className="flex flex-col mx-[156px] gap-[96px] min-h-screen">
       <div className="flex flex-col items-center gap-4 mt-[16%]">
         <h2>Counter</h2>
-        <h1 className={`text-[119.66px] ${color}`}>{count}</h1>
+        <h1 className={`text-[119.66px] ${color}`}>{count} A</h1>
       </div>
       <div className="flex flex-row gap-[72px] justify-center items-center">
         <button
