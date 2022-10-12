@@ -12,7 +12,7 @@ function App() {
     <div className="flex flex-col mx-[156px] gap-[220px] min-h-screen">
       <div className="flex flex-col items-center gap-2 mt-10">
         <h2 className="font-normal">Level Up - Pool Oct 2022</h2>
-        <h1>Proyetos de Kelvin Cano</h1>
+        <h1>Kelvin Cano Project's</h1>
       </div>
       <div className="flex flex-row gap-10 items-center mx-auto">
         <Link to="/counter">
@@ -24,7 +24,7 @@ function App() {
         <Link to="/chameleon">
           <div className="card flex flex-col px-[100px] py-[68px] items-center justify-center gap-6">
             <img src={emojiLizzard} alt="emoji-lizzard" />
-            <h2>Camaleon</h2>
+            <h2>Chameleon</h2>
           </div>
         </Link>
         <Link to="/pokedex">
