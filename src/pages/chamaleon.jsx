@@ -25,7 +25,7 @@ function Chameleon() {
       </a>
       <div className="flex flex-col items-center gap-4">
         <h2>Current color</h2>
-        <h1 className="text-[119.66px] " id="currentColor">
+        <h1 className="text-[119.66px] text-white" id="currentColor">
           White
         </h1>
       </div>
