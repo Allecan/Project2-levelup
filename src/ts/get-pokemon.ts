@@ -1,13 +1,27 @@
-import axios from "axios";
+// import axios from "axios";
+// import { Pokemon } from './interface/pokemon';
 
-export const getPokemon = async (idPokemon: number) => {
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idPokemon}`
-  );
-  return response;
-};
+// export const foo = async (idPokemon: number): Promise<Pokemon> => {
+//   const API_URL: string = "https://pokeapi.co/api/v2/pokemon/";
+//   const {data} = await axios.get<Pokemon>(`${API_URL}${idPokemon}`);
+//   return data;
+// };
 
-// export default async function getPokemon() {
-//     console.log("Aqui es typescript");
-//     return 1;
-//   };
+// import { useEffect, useState } from "react";
+// import { Pokemon } from "./interface/pokemon";
+// import axios from "axios";
+
+// const getPokemon = () => {
+//   const [pokemons, setPokemons] = useState([]);
+
+//   useEffect(() => {
+//     const pokemon = async (idPokemon: number) => {
+//       const API_URL: string = "https://pokeapi.co/api/v2/pokemon/";
+//       const { data } = await axios.get<Pokemon>(`${API_URL}${idPokemon}`);
+//       setPokemons(data);
+//     };
+//   }, []);
+//   return pokemons;
+// };
+
+
