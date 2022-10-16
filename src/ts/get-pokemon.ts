@@ -1,27 +1,21 @@
-// import axios from "axios";
-// import { Pokemon } from './interface/pokemon';
+import axios from "axios";
+import { Pokemon } from "./interface/pokemon";
 
-// export const foo = async (idPokemon: number): Promise<Pokemon> => {
-//   const API_URL: string = "https://pokeapi.co/api/v2/pokemon/";
-//   const {data} = await axios.get<Pokemon>(`${API_URL}${idPokemon}`);
-//   return data;
-// };
+async function fetchData(idPokemon: number) {
+  const API_URL: string = "https://pokeapi.co/api/v2/pokemon/";
+  const { data } = await axios.get<Pokemon>(`${API_URL}${idPokemon}`);
+  return data;
+}
 
-// import { useEffect, useState } from "react";
-// import { Pokemon } from "./interface/pokemon";
-// import axios from "axios";
-
-// const getPokemon = () => {
-//   const [pokemons, setPokemons] = useState([]);
-
-//   useEffect(() => {
-//     const pokemon = async (idPokemon: number) => {
-//       const API_URL: string = "https://pokeapi.co/api/v2/pokemon/";
-//       const { data } = await axios.get<Pokemon>(`${API_URL}${idPokemon}`);
-//       setPokemons(data);
-//     };
-//   }, []);
-//   return pokemons;
-// };
-
-
+export default function getPokemons() {
+  for (let i = 1; i < 7; i++) {
+    let random: number = Math.floor(Math.random() * (905 - 1 + 1) + 1);
+    fetchData(random).then(function (pokemonRes) {
+      let pokemonName: string = pokemonRes.name;
+      let pokemonImg: string = pokemonRes.sprites.front_default;
+      document.getElementById(`pokecard-img-${i}`).src = pokemonImg;
+      document.getElementById(`pokecard-img-${i}`).alt = pokemonName;
+      document.getElementById(`pokecard-title-${i}`).innerHTML = pokemonName;
+    });
+  }
+}

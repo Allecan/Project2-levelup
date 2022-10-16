@@ -1,27 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PokeCard from "../components/pokecard";
-import useGetPokemons from "../js/pokemonHook";
-import PikachuIMG from "../assets/imgs/pikachu2.png";
 import "../css/pokedex.css";
-// import suma from "../ts/test";
-// import getPokemon from "../ts/get-pokemon";
-// import { getPokemon } from "../ts/get-pokemon";
+import getPokemons from "../ts/get-pokemon";
 
 function Pokedex() {
-  //   function setSixPokemons() {
-  //     console.log("suma: " + suma(100, 3));
-  //     let pokemones = [];
-  //     const maxPokemons = 6;
-  //     let rand = Math.floor(Math.random() * (905 - 1 + 1) + 1);
-  //     getPokemon(rand)
-  //       .then((pokemon) => console.log(pokemon.sprites.front_default))
-  //       .catch((error) => console.log(error));
-  //   }
-  const pokemons = useGetPokemons(2);
-  function test() {
-    console.log(typeof(pokemons));
-    console.log(pokemons.length);
-  }
+  useEffect(() => {
+    getPokemons();
+  }, []);
   return (
     <div className="flex flex-col mx-[156px] place-content-center min-h-screen">
       <a href="/" className="fixed left-16 top-16">
@@ -30,23 +15,31 @@ function Pokedex() {
         </h3>
       </a>
       <div className="grid grid-cols-3 gap-10 items-center mx-auto">
-        {/* {pokemons.map((pokemon) => (
-          <PokeCard
-            pokeimg={
-              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png"
-            }
-            pokename={"Pikachu"}
-          />
-        ))} */}
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-1" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-1"></h2>
+        </div>
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-2" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-2"></h2>
+        </div>
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-3" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-3"></h2>
+        </div>
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-4" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-4"></h2>
+        </div>
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-5" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-5"></h2>
+        </div>
+        <div className="poke-card flex flex-col items-center justify-center gap-6">
+          <img id="pokecard-img-6" className="w-40 h-40" src={""} alt={""} />
+          <h2 id="pokecard-title-6"></h2>
+        </div>
       </div>
-      <button
-        className="mt-12 w-14 h-14 mx-auto"
-        onClick={() => {
-          test();
-        }}
-      >
-        Click
-      </button>
     </div>
   );
 }
