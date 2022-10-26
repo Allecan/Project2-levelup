@@ -8,7 +8,7 @@ const PokeCard = (props) => {
         src={props.pokeimg}
         alt={`pokemon-image ${props.pokeimg}`}
       />
-      <h2>{props.pokename}</h2>
+      <h2 className="text-center">{props.pokename}</h2>
     </div>
   );
 };

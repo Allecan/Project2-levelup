@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import emojiLizzard from "./assets/imgs/emoji-lizzard.png";
 import emojiStopwatch from "./assets/imgs/emoji-stopwatch.png";
@@ -6,8 +5,6 @@ import emojiUnicorn from "./assets/imgs/emoji-unicorn.png";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="flex flex-col mx-[156px] gap-[220px] min-h-screen">
       <div className="flex flex-col items-center gap-2 mt-10">

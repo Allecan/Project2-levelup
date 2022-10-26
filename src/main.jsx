@@ -8,14 +8,14 @@ import Pokedex from "./pages/pokedex";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/chameleon" element={<Chameleon />} />
-        <Route path="/pokedex" element={<Pokedex />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/counter" element={<Counter />} />
+      <Route path="/chameleon" element={<Chameleon />} />
+      <Route path="/pokedex" element={<Pokedex />} />
+    </Routes>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
